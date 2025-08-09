@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    p {
+        flex: 1;
+        font-size: 1.1rem;
+        color: $text-color-secondary;
+    }
+
+    .profile-pic {
+        border-radius: 50%;
+        border: 3px solid $primary-color;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,53 @@
+@use 'variables' as *;
+
+#hero {
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.9)), url('https://www.transparenttextures.com/patterns/cubes.png');
+
+    .hero-text {
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+
+            @media (max-width: 768px) {
+                font-size: 2.5rem;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: $text-color-secondary;
+
+            @media (max-width: 768px) {
+                font-size: 1.4rem;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 1.2rem;
+            }
+
+        }
+
+        .highlight {
+            color: $primary-color;
+        }
+
+        .cursor {
+            display: inline-block;
+            background-color: $secondary-color;
+            width: 3px;
+            animation: blink 1s infinite;
+            margin-left: 5px;
+        }
+
+    }
+}

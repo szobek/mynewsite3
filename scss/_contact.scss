@@ -1,0 +1,18 @@
+@use 'variables' as *;
+#contact {
+  text-align: center;
+
+  .contact-email {
+    font-size: 1.5rem;
+    color: $secondary-color;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: $secondary-color;
+    }
+  }
+}

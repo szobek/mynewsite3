@@ -1,0 +1,104 @@
+@use 'variables' as *;
+
+header {
+  background-color: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      li {
+        a {
+          color: $text-color;
+          text-decoration: none;
+          font-weight: 400;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $secondary-color;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+
+  div {
+    width: 25px;
+    height: 3px;
+    background-color: $text-color;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: $surface-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+    transform: translateX(100%);
+    /* Eltoljuk a képernyőről */
+    transition: transform 0.5s ease-in;
+    padding: 2rem 0;
+    &.nav-active {
+      transform: translateX(0%);
+    }
+    li{
+      opacity: 0;
+    }
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
