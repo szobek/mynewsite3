@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function type() {
         const currentWord = words[wordIndex];
-        const currentText = isDeleting 
-            ? currentWord.substring(0, charIndex--) 
+        const currentText = isDeleting
+            ? currentWord.substring(0, charIndex--)
             : currentWord.substring(0, charIndex++);
-        
+
         typingTextElement.textContent = currentText;
         const typeSpeed = isDeleting ? 100 : 200;
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(type, typeSpeed);
     }
-    
+
     type();
 
     //  Görgetésre beúszó animációk (Intersection Observer)
@@ -82,43 +82,43 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     lazyImages.forEach(lazyLoad);
-listSkiilsFunction();
-listProjectsFunction();
+    listSkiilsFunction();
+    listProjectsFunction();
 });
 
-const skills = ['HTML', 'CSS', 'JavaScript', 'Angular', 'Node.js', 'Git', 'Webpack', 'Sass', 'React', 'Vue.js', 'TypeScript', 'Bootstrap', 'Tailwind CSS', 'Figma', 'Photoshop', 'Illustrator', 'Responsive Design', 'UI/UX Design', 'Agile Methodologies', 'RESTful APIs', 'GraphQL', 'Testing', 'CI/CD', 'Docker',  'Firebase', 'MongoDB', 'PostgreSQL', 'MySQL', 'GraphQL', 'Web Accessibility (a11y)', 'Performance Optimization', 'Cross-Browser Compatibility', 'SEO Best Practices', 'Progressive Web Apps (PWA)', 'Single Page Applications (SPA)', 'Content Management Systems (CMS)', 'E-commerce Platforms', 'Version Control Systems', 'Code Review Practices', 'Agile Development', 'Scrum Methodology',  'API Design and Development', 'WebSockets', 'GraphQL APIs', 'OAuth and OpenID Connect', 'JWT Authentication', 'WebAssembly', 'Progressive Enhancement', 'Mobile-First Design', 'Cross-Platform Development', 'Static Site Generators', 'Content Delivery Networks (CDN)', 'Web Performance Optimization', 'Security Best Practices', 'Data Visualization', 'Real-Time Applications', 'Web Components', 'Custom Elements', 'Shadow DOM', 'CSS Grid Layout', 'CSS Flexbox', 'CSS Animations and Transitions', 'SVG Graphics', 'Canvas API', 'WebGL',  'Fetch API', 'XMLHttpRequest', 'Service Workers', 'Web Push Notifications', 'IndexedDB', 'Local Storage', 'Session Storage', 'WebSockets', 'Server-Sent Events (SSE)', 'Progressive Web Apps (PWA)', 'Responsive Images', 'CSS Variables', 'PostCSS', 'Babel', 'ESLint', 'Prettier', 'Storybook', 'Hot Module Replacement (HMR)', 'Lazy Loading Components', 'Internationalization (i18n)'];
-  const projects = [
-        {
-            title: 'Létezz könnyedén',
-            description: 'Az egész oldalt én csináltam Angularral a megrendelő ötlete szerint készült a design.',
-            image: 'lk_logo.png'
-        },
-        {
-            title: 'BME Környezetgazdaság tanszék',
-            description: 'A backendet is én csináltam (Laravel ) és a frontendet a bladek jelenítik meg (SSR).',
-            image: 'bme_logo.png'
-        },
-        {
-            title: 'Zöldséges',
-            description: 'A frontendet csináltam ebben a projektben, együtt működve az UI csapattal és backendes csapattal',
-            image: 'zoldseges_logo.png'
-        },
-        {
-            title: 'Futárom',
-            description: 'A frontendet csináltam ebben a projektben, együtt működve az UI csapattal és backendes csapattal',
-            image: 'futarom_logo.png'
-        },
-        {
-            title: 'Pimpa',
-            description: 'A backendet is én csináltam (Laravel) és a frontendet a bladek jelenítik meg (SSR).',
-            image: 'pimpa_logo.png'
-        },
-        {
-            title: 'Ammarna',
-            description: 'A frontendet ( Angular ) csináltam ebben a projektben, együtt működve az UI csapattal és backendes csapattal',
-            image: 'ammarna_logo.png'
-        }
-    ]
+const skills = ['HTML', 'CSS', 'JavaScript', 'Angular', 'Node.js', 'Git', 'Webpack', 'Sass', 'React', 'Vue.js', 'TypeScript', 'Bootstrap', 'Tailwind CSS', 'Figma', 'Photoshop', 'Illustrator', 'Responsive Design', 'UI/UX Design', 'Agile Methodologies', 'RESTful APIs', 'GraphQL', 'Testing', 'CI/CD', 'Docker', 'Firebase', 'MongoDB', 'PostgreSQL', 'MySQL', 'GraphQL', 'Web Accessibility (a11y)', 'Performance Optimization', 'Cross-Browser Compatibility', 'SEO Best Practices', 'Progressive Web Apps (PWA)', 'Single Page Applications (SPA)', 'Content Management Systems (CMS)', 'E-commerce Platforms', 'Version Control Systems', 'Code Review Practices', 'Agile Development', 'Scrum Methodology', 'API Design and Development', 'WebSockets', 'GraphQL APIs', 'OAuth and OpenID Connect', 'JWT Authentication', 'WebAssembly', 'Progressive Enhancement', 'Mobile-First Design', 'Cross-Platform Development', 'Static Site Generators', 'Content Delivery Networks (CDN)', 'Web Performance Optimization', 'Security Best Practices', 'Data Visualization', 'Real-Time Applications', 'Web Components', 'Custom Elements', 'Shadow DOM', 'CSS Grid Layout', 'CSS Flexbox', 'CSS Animations and Transitions', 'SVG Graphics', 'Canvas API', 'WebGL', 'Fetch API', 'XMLHttpRequest', 'Service Workers', 'Web Push Notifications', 'IndexedDB', 'Local Storage', 'Session Storage', 'WebSockets', 'Server-Sent Events (SSE)', 'Progressive Web Apps (PWA)', 'Responsive Images', 'CSS Variables', 'PostCSS', 'Babel', 'ESLint', 'Prettier', 'Storybook', 'Hot Module Replacement (HMR)', 'Lazy Loading Components', 'Internationalization (i18n)'];
+const projects = [
+    {
+        title: 'Létezz könnyedén',
+        description: 'Az egész oldalt én csináltam Angularral a megrendelő ötlete szerint készült a design.',
+        image: 'lk_logo.png'
+    },
+    {
+        title: 'BME Környezetgazdaság tanszék',
+        description: 'A backendet is én csináltam (Laravel ) és a frontendet a bladek jelenítik meg (SSR).',
+        image: 'bme_logo.png'
+    },
+    {
+        title: 'Zöldséges',
+        description: 'A frontendet csináltam ebben a projektben, együtt működve az UI csapattal és backendes csapattal',
+        image: 'zoldseges_logo.png'
+    },
+    {
+        title: 'Futárom',
+        description: 'A frontendet csináltam ebben a projektben, együtt működve az UI csapattal és backendes csapattal',
+        image: 'futarom_logo.png'
+    },
+    {
+        title: 'Pimpa',
+        description: 'A backendet is én csináltam (Laravel) és a frontendet a bladek jelenítik meg (SSR).',
+        image: 'pimpa_logo.png'
+    },
+    {
+        title: 'Ammarna',
+        description: 'A frontendet ( Angular ) csináltam ebben a projektben, együtt működve az UI csapattal és backendes csapattal',
+        image: 'ammarna_logo.png'
+    }
+]
 const listSkiilsFunction = () => {
     const listSkills = document.querySelector('.skills-container');
     skills.forEach((skill) => {
@@ -130,32 +130,49 @@ const listSkiilsFunction = () => {
 };
 const listProjectsFunction = () => {
     const listProjects = document.querySelector('.projects-container');
-    
+
     projects.forEach((project) => {
         const card = document.createElement('div');
         card.classList.add('project-card');
-        
+
         const img = document.createElement('img');
         const row = document.createElement('p');
         row.classList.add('text-center');
         row.classList.add('p-1');
         img.src = `assets/${project.image}`;
         img.alt = project.title;
-        
+
         row.appendChild(img);
-        
+
         const title = document.createElement('h3');
         title.textContent = project.title;
-        
+
         const description = document.createElement('p');
         description.classList.add('text-center');
         description.classList.add('p-1');
         description.textContent = project.description;
-        
+
         card.appendChild(row);
         card.appendChild(title);
         card.appendChild(description);
-        
+
         listProjects.appendChild(card);
     });
+    const btn = document.querySelector('.upper');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            btn.style.display = 'block';
+        } else {
+            btn.style.display = 'none';
+        }
+    });
+
+    document.querySelector('.upper').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+    });
+});
+
 }
