@@ -117,6 +117,16 @@ const projects = [
         title: 'Ammarna',
         description: 'A frontendet ( Angular ) csináltam ebben a projektben, együtt működve az UI csapattal és backendes csapattal',
         image: 'ammarna_logo.png'
+    },
+    {
+        title: 'Atád Clean Kft.',
+        description: 'Az unas rendszerben készítettem el a weboldalt a megrendelő igényei szerint.',
+        image: 'atad_logo.png'
+    },
+    {
+        title: 'Genesis Házak Kft.',
+        description: 'A backendet is én csináltam (Laravel) és a frontendet a bladek jelenítik meg (SSR).',
+        image: 'genesis-w-970x1024.png'
     }
 ]
 const listSkiilsFunction = () => {
